@@ -1,0 +1,56 @@
+package com.arrays;
+// input {1 1 0
+
+//	    1 1 1
+//	    0 1 1}
+
+// output--> { 0 0 0
+//	 		 0 1 0
+//	 		 0 0 0 }
+
+public class ZeroingRowsAndCols {
+
+	public static void main(String[] args) {
+
+		int arr[][] = { { 1, 1, 0 }, { 1, 1, 1 }, { 0, 1, 1 } };
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j <= arr.length - 1; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+		System.out.println("-------------");
+		// condition
+
+		boolean[] r = new boolean[arr.length];
+		boolean[] col = new boolean[arr[0].length];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j <= arr.length - 1; j++) {
+				// for positions
+				if (arr[i][j] == 0) {
+					r[i] = true;
+					col[j] = true;
+				}
+			}
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j <= arr.length - 1; j++) {
+				if (r[i] || col[j] == true) {
+					arr[i][j] = 0;
+				}
+//				System.out.println(arr[k][s] + " ");
+			}
+//			System.out.println();
+		}
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j <= arr.length - 1; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
