@@ -14,9 +14,7 @@ public class Emp1 {
 
 	//Once we can created the any Constructor like No-args, parameterized. 
 	//Default Constructor is removed by the JVM Automatically 
-	//no-args constructors perform whenever we create a (no-agrs)constructor.
-	
-	
+	//no-args constructors perform whenever we create a (no-agrs)constructor
 	//constructor name always starts with class name only
 	
 	//no-agrs constructor
@@ -53,7 +51,7 @@ public class Emp1 {
 	Emp1 e5 = new Emp1();//Whenever Object is created Constructor will call Automatically
 	System.out.println("Main Method Started..!");
 	
-	//There is No constructor in java , JVM will automatically created a default constructor 
+	// JVM will automatically created a default constructor 
 	Emp1 e1 = new Emp1();//Emp1() So,this object creation is called default constructor 
 	e1.EmpId=100;
 	e1.EmpName="Chiru"; 
